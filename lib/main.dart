@@ -36,39 +36,43 @@ class _HomeState extends State<Home> {
           title: Text('Cálculo abastecimento'),
         ),
         body: Container(
-          margin: EdgeInsets.all(25),
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(top: 60),
-                child: Image.asset('images/logo.png'),
+            margin: EdgeInsets.all(25),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 60),
+                    child: Image.asset('images/logo.png'),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 30),
+                    child: Text(
+                        'Saiba qual a melhor opção de abastecimento do seu carro',
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.w700)),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 30),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          labelText: 'Preço do álcool, ex: 1.59',
+                          labelStyle: TextStyle(fontSize: 20)),
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        labelText: 'Preço da gasolina, ex: 3.15',
+                        labelStyle: TextStyle(fontSize: 20)),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.only(top: 10),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Calcular'),
+                      )),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Text(
-                    'Saiba qual a melhor opção de abastecimento do seu carro',
-                    style:
-                        TextStyle(fontSize: 25, fontWeight: FontWeight.w700)),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: TextField(
-                  decoration: InputDecoration(
-                      labelText: 'Preço do álcool, ex: 1.59',
-                      labelStyle: TextStyle(fontSize: 20)),
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    labelText: 'Preço da gasolina, ex: 3.15',
-                    labelStyle: TextStyle(fontSize: 20)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Calcular'),
-              )
-            ],
-          ),
-        ));
+            )));
   }
 }
