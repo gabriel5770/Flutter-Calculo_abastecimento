@@ -63,6 +63,7 @@ class _HomeState extends State<Home> {
                   Padding(
                     padding: EdgeInsets.only(top: 30),
                     child: TextField(
+                      keyboardType: TextInputType.number,
                       controller: _textEditingControllerAlcool,
                       decoration: InputDecoration(
                           labelText: 'Preço do álcool, ex: 1.59',
@@ -70,11 +71,16 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     controller: _textEditingControllerGasolina,
                     decoration: InputDecoration(
                         labelText: 'Preço da gasolina, ex: 3.15',
                         labelStyle: TextStyle(fontSize: 20)),
                   ),
+                  // Text(
+                  //   'Preencha todos os campos',
+                  //   style: TextStyle(color: Colors.red),
+                  // ),
                   Padding(
                       padding: EdgeInsets.only(top: 10),
                       child: ElevatedButton(
@@ -87,30 +93,23 @@ class _HomeState extends State<Home> {
                                 height: 100,
                                 child: Center(
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Container(
-                                        child: Column(
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Center(
-                                                  child: Text(
-                                                    '$resultado',
-                                                    style: TextStyle(
-                                                        fontSize: 20,
-                                                        fontWeight:
-                                                            FontWeight.w700),
-                                                  ),
-                                                ),
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Center(
+                                          child: Column(
+                                            children: [
+                                              Text(
+                                                '$resultado',
+                                                style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight:
+                                                        FontWeight.w900),
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      ]),
                                 ),
                               );
                             },
